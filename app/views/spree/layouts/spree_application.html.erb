@@ -9,6 +9,7 @@
 <!-- css -->
 
 <%= stylesheet_link_tag 'spree/frontend/bootstrap.min.css' %>
+<%= yield :css_page %>
 <%= stylesheet_link_tag 'spree/frontend/style.css' %>
 
 
@@ -24,7 +25,8 @@
   </style>
 
 
-  <%= %>
+  <%= stylesheet_link_tag 'spree/frontend/ion.rangeSlider.css' %>
+  <%= stylesheet_link_tag 'spree/frontend/ion.rangeSlider.skinFlat.css' %>
   <!-- <link href="css/masterslider.css" rel="stylesheet" /> -->
   
 </head>
@@ -96,7 +98,7 @@
     <div class="col-lg-6 row">
       <ul class="list-inline" style="display:inline;">
         <li><a href="/">Home</a></li>
-        <li><a href="javascript:void(0);">Products</a></li>
+        <li><a href="/products">Products</a></li>
         <li><a href="javascript:void(0);">Toys</a></li>
       </ul>
       </div>
@@ -211,7 +213,7 @@ sit amet mauris. </p>
 
     </script>
 
-
+<%= yield :js_page %>
 <script>
 
 		nxt="111";
