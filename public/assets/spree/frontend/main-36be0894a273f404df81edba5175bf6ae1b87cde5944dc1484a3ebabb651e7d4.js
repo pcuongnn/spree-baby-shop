@@ -1,0 +1,1 @@
+$(document).ready(function(){$(window).bind("scroll",function(){var o=$("#box1").height();$(window).scrollTop()>o?$("nav").addClass("goToTop"):$("nav").removeClass("goToTop")})});
