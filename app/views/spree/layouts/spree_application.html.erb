@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="utf-8" />
+<meta name="author" content="Minor Solis" />
+<title>Spree Commerce</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<!-- css -->
+
+<%= stylesheet_link_tag 'spree/frontend/bootstrap.min.css' %>
+<%= stylesheet_link_tag 'spree/frontend/style.css' %>
+
+
+ <style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }
+  
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover{border:none;}
+  
+  </style>
+
+
+  <%= %>
+  <!-- <link href="css/masterslider.css" rel="stylesheet" /> -->
+  
+</head>
+<body>
+
+<!-- box1 -->
+<div id="box1" class="home">
+  
+ 
+  <div class="container">
+    <div class="col-lg-7 top-nav" style="padding-top:5px; padding-bottom:5px;">
+    	<div class="row">
+		<span style="padding-right:10px; "><i class=" glyphicon glyphicon-envelope" style="margin-right:5px;"></i>Call: +91-7893557799</span>
+        <span><i class="glyphicon glyphicon-earphone" style="margin-right:5px;"></i>Mail: iam@nandamuri.me</span>
+	</div>
+    </div>
+	<div class="col-lg-5" style="padding-top:5px; padding-bottom:5px;">
+    <div class="row">
+   		<span class="pull-right">Welcome to Spree Commerce, You can <a href="#" style="font-weight:bold;">Login</a> or <a href="#" style="font-weight:bold;">Signup!</a></span>
+    </div> 
+    </div>
+  </div>
+
+
+<header style="background:#f8f4ef; padding:25px 0px;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 col-xs-12">
+        <div id="logo">
+                    <a href="#"><%= image_tag 'spree/frontend/logo.png' , class: 'img-responsive' %><!-- <img class="img-responsive" alt="" title="" src="images/logo.png"> --></a>
+                  </div>
+      </div>
+	  
+   <div class="col-lg-5 col-xs-12">   
+  <div class="pull-right">
+	
+	<div class="free_shipping">
+		<span><i class="f-l"><%= image_tag 'spree/frontend/free.png' %><!-- <img src="images/free.png"> --></i>Free Shipping*</span>
+		
+	</div>
+    
+    <div class="money_back">
+		<span><i class="f-l"><%= image_tag 'spree/frontend/money.png' %><!-- <img src="images/money.png"> --></i> Money back Guarantee</span>
+		
+	</div>
+    
+    
+    </div>
+</div>      </div>
+    </div>
+</header>
+  
+  
+  
+</div>
+<!-- /box1 --> 
+
+<!-- navbar -->
+<nav class="navbar navbar-default" role="navigation">
+
+
+
+
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="#"></a> </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse-main">
+    <div class="col-lg-6 row">
+      <ul class="list-inline" style="display:inline;">
+        <li><a href="javascript:void(0);" class="active">Home</a></li>
+        <li><a href="javascript:void(0);">Products</a></li>
+        <li><a href="javascript:void(0);">Toys</a></li>
+      </ul>
+      </div>
+      <div class=" search-entire pull-right">
+      
+      <div class="" style="float: left; width: 130px;">
+      <span><i><%= image_tag 'spree/frontend/cart.png' %><!-- <img src="images/cart.png"> --></i> 0 ITEMS- <b>&#8377;</b>  0</span>
+      </div>
+      <div class="" style="float: left; width: 323px;">
+      
+  	<input type="text" class="pull-left" placeholder="Search" value="" name="search">
+  
+    <button class="btn btn-default btn-lg pull-right btn111" type="button"><i class="glyphicon glyphicon-search"></i></button>
+  
+</div>
+    </div>
+    </div>
+  </div>
+</nav>
+<!-- /navbar --> 
+
+<div class="container">
+  <%= yield %>
+</div>
+
+
+
+<!-- footer -->
+<footer>
+ <div class="container-fluid" style="background:#333333;">
+  <div class="container" style="padding:25px 0px; 0">
+    
+    <div class="col-lg-4" >
+    	<h6>Contact Us</h6>
+    	
+        <p><i class="glyphicon glyphicon-map-marker " style="margin-right:5px;"></i>362 Fairview Way, Milpitas, CA 95035 USA</p>
+        <p><i class="glyphicon glyphicon-earphone" style="margin-right:5px;"></i>+1 789 355 7799</p>
+        <p><i class="glyphicon glyphicon-envelope" style="margin-right:5px;"></i>support@domain.com</p>
+        
+        
+    </div>
+    
+    <div class="col-lg-4 bdmm" style="padding-bottom:25px;">
+    	<h6>Newsletter</h6>
+        <p>Make sure you dont miss interesting hapenings by
+joining our newsletter program</p>
+	<p><input type="text" value=""><input type="button" value="Subscribe" class="sub"></p>
+    </div>
+    <div class="col-lg-4">
+    	<h6>Follow Us</h6>
+        <p>Nisi elituat ipsum odio sit amet nibh ulpate cursus a
+sit amet mauris. </p>
+<p><a href="#"><%= image_tag 'spree/frontend/fb.png' %><!-- <img src="images/fb.png"> --></a> <a href="#"><%= image_tag 'spree/frontend/tw.png' %><!-- <img src="images/tw.png"> --></a> <a href="#"><%= image_tag 'spree/frontend/gp.png' %><!-- <img src="images/gp.png"> --></a> <a href="#"><%= image_tag 'spree/frontend/yt.png' %><!-- <img src="images/yt.png"> --></a></p>
+    
+    </div>
+     <hr style="display:block; height:1px; background:#444; border:none; clear:both;">
+     <div class="foot-logos">
+     	<a href="#"><%= image_tag 'spree/frontend/visa.png' %></a>
+        <a href="#"><%= image_tag 'spree/frontend/l2.png' %></a>
+        <a href="#"><%= image_tag 'spree/frontend/l3.png' %></a>
+        <a href="#"><%= image_tag 'spree/frontend/l4.png' %></a>
+        <a href="#"><%= image_tag 'spree/frontend/l5.png' %></a>
+        <a href="#"><%= image_tag 'spree/frontend/l6.png' %></a>
+        <a href="#"><%= image_tag 'spree/frontend/l7.png' %></a>
+        <a href="#"><%= image_tag 'spree/frontend/l8.png' %></a>
+        <a href="#"><%= image_tag 'spree/frontend/l9.png' %></a>
+        <a href="#"><%= image_tag 'spree/frontend/l10.png' %></a>
+     
+     
+     </div>
+     
+ </div>
+ 
+    
+  </div>
+ 
+ <div class="container-fluid" style="background:#3c3c3c; padding:30px 0px;">
+		<div class="foo-menu">
+        	<a href="#">About us</a>   <i> |</i>    <a href="#">Customer service </a>   <i> |</i>    <a href="#">Site map</a>    <i> |</i>    <a href="#">Terms & Conditions</a>    <i> |</i>   <a href="#"> Privacy Policy</a>    <i> |</i>  <a href="#"> Order & Returns</a>    <i> |</i>    <a href="#">FAQ’s</a>
+            
+            <p>© 2015 spreecommerce.com. All Rights Reserved. Designed By Kishan	</p>
+        
+        </div>
+ 
+ 
+ 
+  </div>
+</footer>
+<!-- /footer --> 
+
+<!-- js --> 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<%= javascript_include_tag 'spree/frontend/main.js'%>
+<!-- <script src="js/main.js"></script> -->
+
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+
+<%= javascript_include_tag 'spree/frontend/responsive-tabs.js'%>
+<!-- <script src="js/responsive-tabs.js"></script> -->
+<script type="text/javascript">
+      $( '#myTab a' ).click( function ( e ) {
+        e.preventDefault();
+        $( this ).tab( 'show' );
+      } );
+
+      $( '#moreTabs a' ).click( function ( e ) {
+        e.preventDefault();
+        $( this ).tab( 'show' );
+      } );
+
+     
+
+    </script>
+
+
+<script>
+
+		nxt="111";
+	prv="111";
+	 document.getElementById("111").style.display = 'block';
+  	document.getElementById("222").style.display = 'none';
+	
+    function next(){
+	    //alert(prv + " "+nxt);
+		//alert("text");
+		if(nxt=="111"){
+		//alert("11111");
+			 document.getElementById("111").style.display = 'none';
+  		 	 document.getElementById("222").style.display = 'block';
+			 nxt="222";
+			 prev="111";
+
+		}		
+		
+		else if(nxt=="222"){
+		//alert("22222");
+			 document.getElementById("111").style.display = 'block';
+  		 	 document.getElementById("222").style.display = 'none';
+			 nxt="111";
+			 prev="222";
+
+		}
+	
+	}
+	
+	
+	function prev(){
+	   //alert(prv + " "+nxt);
+		if(prv=="111"){
+			 document.getElementById("111").style.display = 'block';
+  		 	 document.getElementById("222").style.display = 'none';
+			 nxt="222";
+			 prv="111";
+
+		}
+		
+		
+		else if(prv=="222"){
+			 document.getElementById("111").style.display = 'none';
+  		 	 document.getElementById("222").style.display = 'block';
+			 nxt="111";
+			prv="222";
+
+		}
+	
+	}
+	
+
+
+</script>
+
+
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+</body>
+</html>
