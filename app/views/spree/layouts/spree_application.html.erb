@@ -44,7 +44,13 @@
     </div>
 	<div class="col-lg-5" style="padding-top:5px; padding-bottom:5px;">
     <div class="row">
-   		<span class="pull-right">Welcome to Spree Commerce, You can <a href="#" style="font-weight:bold;">Login</a> or <a href="#" style="font-weight:bold;">Signup!</a></span>
+   		<span class="pull-right">Welcome to Spree Commerce, You can 
+        <% if spree_current_user %>
+          <%= link_to 'Logout', destroy_spree_user_session_path, style: "font-weight:bold;" %>
+        <% else %>
+          <%= link_to 'Login', spree_login_path, style: "font-weight:bold;" %> or <a href="/signup" style="font-weight:bold;">Signup!</a></span>
+        <% end %>  
+       
     </div> 
     </div>
   </div>
