@@ -30,17 +30,18 @@
     </div>
     <div class="col-lg-9">
     	<div class="row">
-        <div class="col-lg-4">
+            <% @products.each do |product| %>
+                <div class="col-lg-4">
        
                                 <div class="thumbnail no-border no-padding">
                                     <div class="media">
-                                        <a class="media-link" data-gal="prettyPhoto" href="#" style="height:197px; background:#eeeeee; padding-top:13%;">
-                                            <%= image_tag 'spree/frontend/t-shirt2.png' %>
+                                        <a class="media-link" data-gal="prettyPhoto" href="/products/<%= product.id %>" style="height:197px; background:#eeeeee; padding-top:13%;">
+                                            <%= product_image(product) %>
                                             <span class="icon-view"><strong>Quick View</strong></span>
                                         </a>
                                     </div>
                                     <div class="caption text-center">
-                                        <h4 class="caption-title"><a href="#">Apache Baseball Jersey</a></h4>
+                                        <h4 class="caption-title"><a href="#"><%= product.name %></a></h4>
                                         <div class="rating">
                                             <span class="glyphicon glyphicon-star"></span>
                                             <span class="glyphicon glyphicon-star"></span>
@@ -48,37 +49,7 @@
                                             <span class="glyphicon glyphicon-star"></span>
                                             <span class="glyphicon glyphicon-star"></span>
                                         </div>
-                                        <div class="price"><hr><ins>&#8377; 400.00</ins> </div>
-                          <div class="buttons">
-                                            <a class="btn btn-theme btn-theme-transparent btn-wish-list" href="#"><i class="glyphicon glyphicon-heart"></i></a><!--
-                                            --><a class="btn btn-theme btn-theme-transparent btn-icon-left" href="#">
-                                            Out Of Stock</a><!--
-                                            --><a class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="glyphicon glyphicon-signal"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                       </div> 
-                       
-                       
-                       <div class="col-lg-4">
-       
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="media">
-                                        <a class="media-link" data-gal="prettyPhoto" href="#" style="height:197px; background:#eeeeee; padding-top:13%;">
-                                            <%= image_tag 'spree/frontend/t-shirt2.png' %>
-                                            <span class="icon-view"><strong>Quick View</strong></span>
-                                        </a>
-                                    </div>
-                                    <div class="caption text-center">
-                                        <h4 class="caption-title"><a href="#">Apache Baseball Jersey</a></h4>
-                                        <div class="rating">
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                        </div>
-                                         <div class="price"><hr><ins>&#8377; 400.00</ins> </div>
+                                        <div class="price"><hr><ins>&#8377; <%= product.price %></ins> </div>
                           <div class="buttons">
                                             <a class="btn btn-theme btn-theme-transparent btn-wish-list" href="#"><i class="glyphicon glyphicon-heart"></i></a><!--
                                             --><a class="btn btn-theme btn-theme-transparent btn-icon-left" href="#">
@@ -88,132 +59,8 @@
                                     </div>
                                 </div>
                        </div>
-                       
-                       <div class="col-lg-4">
-       
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="media">
-                                        <a class="media-link" data-gal="prettyPhoto" href="#" style="height:197px; background:#eeeeee; padding-top:13%;">
-                                            <%= image_tag 'spree/frontend/t-shirt2.png' %>
-                                            <span class="icon-view"><strong>Quick View</strong></span>
-                                        </a>
-                                    </div>
-                                    <div class="caption text-center">
-                                        <h4 class="caption-title"><a href="#">Apache Baseball Jersey</a></h4>
-                                        <div class="rating">
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                        </div>
-                                         <div class="price"><hr><ins>$400.00</ins> </div>
-                          <div class="buttons">
-                                            <a class="btn btn-theme btn-theme-transparent btn-wish-list" href="#"><i class="glyphicon glyphicon-heart"></i></a><!--
-                                            --><a class="btn btn-theme btn-theme-transparent btn-icon-left" href="#">
-                                            Out Of Stock</a><!--
-                                            --><a class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="glyphicon glyphicon-signal"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                       </div>
-                       
-                       <div class="col-lg-4">
-       
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="media">
-                                        <a class="media-link" data-gal="prettyPhoto" href="#" style="height:197px; background:#eeeeee; padding-top:13%;">
-                                            <%= image_tag 'spree/frontend/t-shirt2.png' %>
-                                            <span class="icon-view"><strong>Quick View</strong></span>
-                                        </a>
-                                    </div>
-                                    <div class="caption text-center">
-                                        <h4 class="caption-title"><a href="#">Apache Baseball Jersey</a></h4>
-                                        <div class="rating">
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                        </div>
-                                        <div class="price"><hr><ins>&#8377; 400.00</ins> </div>
-                          <div class="buttons">
-                                            <a class="btn btn-theme btn-theme-transparent btn-wish-list" href="#"><i class="glyphicon glyphicon-heart"></i></a><!--
-                                            --><a class="btn btn-theme btn-theme-transparent btn-icon-left" href="#">
-                                            Out Of Stock</a><!--
-                                            --><a class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="glyphicon glyphicon-signal"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                       </div>
-                       
-                       <div class="col-lg-4">
-       
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="media">
-                                        <a class="media-link" data-gal="prettyPhoto" href="#" style="height:197px; background:#eeeeee; padding-top:13%;">
-                                            <%= image_tag 'spree/frontend/t-shirt2.png' %>
-                                            <span class="icon-view"><strong>Quick View</strong></span>
-                                        </a>
-                                    </div>
-                                    <div class="caption text-center">
-                                        <h4 class="caption-title"><a href="#">Apache Baseball Jersey</a></h4>
-                                        <div class="rating">
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                        </div>
-                                         <div class="price"><hr><ins>&#8377; 400.00</ins> </div>
-                          <div class="buttons">
-                                            <a class="btn btn-theme btn-theme-transparent btn-wish-list" href="#"><i class="glyphicon glyphicon-heart"></i></a><!--
-                                            --><a class="btn btn-theme btn-theme-transparent btn-icon-left" href="#">
-                                            Out Of Stock</a><!--
-                                            --><a class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="glyphicon glyphicon-signal"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                       </div>
-                       
-                       <div class="col-lg-4">
-       
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="media">
-                                        <a class="media-link" data-gal="prettyPhoto" href="#" style="height:197px; background:#eeeeee; padding-top:13%;">
-                                            <%= image_tag 'spree/frontend/t-shirt2.png' %>
-                                            <span class="icon-view"><strong>Quick View</strong></span>
-                                        </a>
-                                    </div>
-                                    <div class="caption text-center">
-                                        <h4 class="caption-title"><a href="#">Apache Baseball Jersey</a></h4>
-                                        <div class="rating">
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                            <span class="glyphicon glyphicon-star"></span>
-                                        </div>
-                                        <div class="price"><hr><ins>&#8377; 400.00</ins> </div>
-                          <div class="buttons">
-                                            <a class="btn btn-theme btn-theme-transparent btn-wish-list" href="#"><i class="glyphicon glyphicon-heart"></i></a><!--
-                                            --><a class="btn btn-theme btn-theme-transparent btn-icon-left" href="#">
-                                            Out Of Stock</a><!--
-                                            --><a class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="glyphicon glyphicon-signal"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                       </div>
-                       
-                       
-                       
-                       
-                       
-                       
-                       
-                          </div>
-    
-    
+            <% end %>
+        </div>
     </div>
     
    
