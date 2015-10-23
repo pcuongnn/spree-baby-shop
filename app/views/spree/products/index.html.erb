@@ -61,6 +61,9 @@
                        </div>
             <% end %>
         </div>
+        <% if @products.respond_to?(:num_pages) %>
+            <%= paginate @products, theme: 'twitter-bootstrap-3' %>
+        <% end %>
     </div>
     
    

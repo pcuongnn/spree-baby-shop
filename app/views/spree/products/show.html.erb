@@ -11,8 +11,8 @@
                                            <i style="color:#ccc;" class="glyphicon glyphicon-star"></i> <b style="color:#ccc;">|</b> <span>1 Reviews</span></h6>
         </div>
         <div class="col-lg-4  text-right">
-        	<a href="#" style="margin:0px 15px; font-size:15px; line-height:37px;"><i class="glyphicon glyphicon-menu-left" style="font-size:14px;"></i>Previous</a>
-            <a href="#" style="font-size:15px; line-height:37px;">Next<i class="glyphicon glyphicon-menu-right"  style="font-size:14px;"></i></a>
+        	<a href="#" style="margin:0px 15px; font-size:15px; line-height:37px;"><i class="glyphicon glyphicon-menu-left" style="font-size:14px;"></i><%= link_to "Previous", @product.prev %>&#8194;&#8194;</a>
+            <a href="#" style="font-size:15px; line-height:37px;"><%= link_to "Next", @product.next %>&#8194;<i class="glyphicon glyphicon-menu-right"  style="font-size:14px;"></i></a>
         </div>
        
         <div class="clearfix"></div>
