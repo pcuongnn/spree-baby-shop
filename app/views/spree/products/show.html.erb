@@ -1,7 +1,7 @@
 	<div class="col-lg-12" >
     	<div style="border:1px solid #e6e6e6; overflow:hidden; padding:10px;">
        <div style="border-bottom:1px solid #e6e6e6; margin-bottom:15px;">
-        <div class="col-lg-4"><h4  style="font-size:24px;">Ruby on Rails Bag</h4></div>
+        <div class="col-lg-4"><h4  style="font-size:24px;"><%= @product.name %></h4></div>
         <div class="col-lg-4">
         	<h6 style="font-size:15px;">
                                            <i class="glyphicon glyphicon-star"></i> 
@@ -43,14 +43,21 @@
         
         	<div class="col-lg-6 row">
             <div class="pd-dt1">
-            	<p><span>&#8377; 500</span> &#8377; 90.00</p>
+            	<p><!-- <span>&#8377; 500</span> &#8377; 90.00 -->&#8377;<%= @product.price %></p>
                 <p><label>Availability: <span>In stock</span></label></p>
             </div>
             </div>
             <div class="col-lg-6 row pull-right">
             <div class="pd-dt2 pull-right">
-            <p><b>QTY:</b><i class="glyphicon glyphicon-menu-left"></i><input type="text" value="1"/><i class="glyphicon glyphicon-menu-right"></i>
-            	<input type="button" value="Add to cart" class="addct">
+            <p><!-- <b>QTY:</b><i class="glyphicon glyphicon-menu-left"></i><input type="text" value="1"/><i class="glyphicon glyphicon-menu-right"></i> -->
+            	<!-- <input type="button" value="Add to cart" class="addct"> -->
+              <%= form_for :order, :url => populate_orders_url do |f| %>
+                              <%= hidden_field_tag "variants[#{@product.variants_including_master.first.id
+                            }]", 1, :size => 3 %>
+                              <%= hidden_field_tag "variant_id", @product.variants_including_master.first.id %>
+                              <%= hidden_field_tag "quantity", 1 %>
+                              <%= button_to 'Add to cart', '#', :onclick => "$(this).parent().submit(); return false;", :class => "addct" %>
+                            <% end %>
             </p>
             </div>
             </div>

@@ -156,86 +156,21 @@
             <div class="row">
                 <div class="products">
                       <a href="javascript:next()" class="a-left glyphicon glyphicon-menu-left"> </a> <a href="javascript:next()" class="a-right glyphicon glyphicon-menu-right"> </a>
-                      
+                        
                         <div class="pdrs" id="111">
-                          
-                              <div class="pdr">
-                                  <i><%= image_tag 'spree/frontend/t-shirt.jpg' %></i>
-                                    <span>Dorala corporis suscipit demo3 04
-                                    <br>
-                                    <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l"></b> 
-                                    <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l" style="color:#ccc;"></b> 
-                                    
-                                    </span>
-                                    <label class="price price-old" style="font-size:14px;">&#8377; 40</label><label class="price" style="font-size:18px;">&#8377; 29</label>
-                                    
-                                
-                                </div>
-                                
+                            <% @products.limit(6).each do |product| %>
                                 <div class="pdr">
-                                    <i><%= image_tag 'spree/frontend/t-shirt.jpg' %></i>
-                                    <span>Dorala corporis suscipit demo3 04
-                                    <br>
-                                    <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l"></b> 
-                                    <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l" style="color:#ccc;"></b> 
-                                    
-                                    </span>
-                                    <label class="price price-old" style="font-size:14px;">&#8377; 40</label><label class="price" style="font-size:18px;">&#8377; 29</label>
-                                
+                                      <i><%= small_image(product) %></i>
+                                        <span><%= product.name %>
+                                        <br>
+                                        <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l"></b> 
+                                        <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l" style="color:#ccc;"></b> 
+                                        
+                                        </span>
+                                        <label class="price price-old" style="font-size:14px;">&#8377; 40</label><label class="price" style="font-size:18px;">&#8377; <%= product.price %></label>
                                 </div>
-                                
-                                
-                                <div class="pdr">
-                                  <i><%= image_tag 'spree/frontend/t-shirt.jpg' %></i>
-                                    <span>Dorala corporis suscipit demo3 04
-                                    <br>
-                                    <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l"></b> 
-                                    <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l" style="color:#ccc;"></b> 
-                                    
-                                    </span>
-                                    <label class="price price-old" style="font-size:14px;">&#8377; 40</label><label class="price" style="font-size:18px;">&#8377; 29</label>
-                                    
-                                
-                                </div>
-                                
-                                <div class="pdr" >
-                                    <i><%= image_tag 'spree/frontend/t-shirt.jpg' %></i>
-                                    <span>Dorala corporis suscipit demo3 04
-                                    <br>
-                                    <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l"></b> 
-                                    <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l" style="color:#ccc;"></b> 
-                                    
-                                    </span>
-                                    <label class="price price-old" style="font-size:14px;">&#8377; 40</label><label class="price" style="font-size:18px;">&#8377; 29</label>
-                                
-                                </div>
-                                
-                                
-                                <div class="pdr">
-                                  <i><%= image_tag 'spree/frontend/t-shirt.jpg' %></i>
-                                    <span>Dorala corporis suscipit demo3 04
-                                    <br>
-                                    <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l"></b> 
-                                    <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l" style="color:#ccc;"></b> 
-                                    
-                                    </span>
-                                    <label class="price price-old" style="font-size:14px;">&#8377; 40</label><label class="price" style="font-size:18px;">&#8377; 29</label>
-                                    
-                                
-                                </div>
-                                
-                                <div class="pdr" >
-                                    <i><%= image_tag 'spree/frontend/t-shirt.jpg' %></i>
-                                    <span>Dorala corporis suscipit demo3 04
-                                    <br>
-                                    <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l"></b> 
-                                    <b class="glyphicon glyphicon-star f-l"></b> <b class="glyphicon glyphicon-star f-l" style="color:#ccc;"></b> 
-                                    
-                                    </span>
-                                    <label class="price price-old" style="font-size:14px;">&#8377; 40</label><label class="price" style="font-size:18px;">&#8377; 29</label>
-                                
-                                </div>
-                               </div>
+                            <% end %>  
+                        </div>
                         
                         
                         

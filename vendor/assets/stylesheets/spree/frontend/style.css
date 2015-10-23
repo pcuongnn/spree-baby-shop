@@ -257,7 +257,7 @@ color:#12962b; text-decoration:none;
 .pd-dt2 p{font-size:15px; color:#454545;}
 .pd-dt2 p input{width:36px; height:36px; text-align:center; font-size:15px; border:1px solid #f2f2f2;}
 .pd-dt2 p input.addct{background:#f05179; color:#fff; width:160px; height:46px; font-size:20px;}
-
+.addct{background:#f05179; color:#fff; width:160px; height:46px; font-size:20px;}
 .pd-dt2 p i{background:#e6e6e6; padding:8px; margin:0px 5px; font-size:12px; cursor:pointer;}
 .pd-dt2 p i:hover{color:#737373; }
 
