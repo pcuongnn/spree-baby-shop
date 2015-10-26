@@ -1,3 +1,25 @@
+<% content_for :js_page do %>
+  <script type="text/javascript">
+    $(function () {
+        $('.glyphicon-menu-right').on('click',function(){
+            var $qty=$(this).closest('form').find('.qty');
+            var currentVal = parseInt($qty.val());
+            if (!isNaN(currentVal)) {
+                $qty.val(currentVal + 1);
+            }
+        });
+        $('.glyphicon-menu-left').on('click',function(){
+            var $qty=$(this).closest('form').find('.qty');
+            var currentVal = parseInt($qty.val());
+            if (!isNaN(currentVal) && currentVal > 0) {
+                $qty.val(currentVal - 1);
+            }
+        });
+    });
+  </script>
+<% end %>
+
+
 	<div class="col-lg-12" >
     	<div style="border:1px solid #e6e6e6; overflow:hidden; padding:10px;">
        <div style="border-bottom:1px solid #e6e6e6; margin-bottom:15px;">
@@ -49,15 +71,17 @@
             </div>
             <div class="col-lg-6 row pull-right">
             <div class="pd-dt2 pull-right">
-            <p><!-- <b>QTY:</b><i class="glyphicon glyphicon-menu-left"></i><input type="text" value="1"/><i class="glyphicon glyphicon-menu-right"></i> -->
-            	<!-- <input type="button" value="Add to cart" class="addct"> -->
+            <p>    
               <%= form_for :order, :url => populate_orders_url do |f| %>
                               <%= hidden_field_tag "variants[#{@product.variants_including_master.first.id
                             }]", 1, :size => 3 %>
                               <%= hidden_field_tag "variant_id", @product.variants_including_master.first.id %>
-                              <%= hidden_field_tag "quantity", 1 %>
+                              <b>QTY:</b>
+                              <i class="glyphicon glyphicon-menu-left"></i>&#8194;<%= text_field_tag "quantity",1 , class: 'qty', size: 1, style: "text-align: center" %>&#8194;<i class="glyphicon glyphicon-menu-right"></i>
                               <%= button_to 'Add to cart', '#', :onclick => "$(this).parent().submit(); return false;", :class => "addct" %>
                             <% end %>
+
+              
             </p>
             </div>
             </div>
